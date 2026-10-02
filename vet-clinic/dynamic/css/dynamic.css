@@ -1,0 +1,83 @@
+/* Модальные окна */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.modal.active { display: flex; }
+
+.modal-content {
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  max-width: 380px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.modal-content h2 { margin-bottom: 16px; }
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.modal-actions button { flex: 1; margin: 0; width: auto; }
+
+.btn-secondary {
+  background: none;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Сообщения об ошибках */
+.error-msg {
+  color: var(--error);
+  font-size: 13px;
+  margin: 6px 0 0;
+  min-height: 18px;
+}
+.input-error {
+  border-color: var(--error);
+  background: #FFF5F5;
+}
+
+/* Тост */
+.toast {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: 300;
+  font-size: 13px;
+  max-width: 90%;
+  text-align: center;
+  pointer-events: none;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Активный слот времени */
+.slot.active {
+  background: var(--accent);
+  color: var(--btn-text);
+  border-color: var(--accent);
+}

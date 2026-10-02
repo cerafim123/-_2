@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ВетКлиника — История</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <button class="icon-btn" onclick="history.back()">←</button>
+    <h1>История Барсика</h1>
+    <button class="icon-btn">⬇</button>
+  </header>
+
+  <div class="filters">
+    <button class="filter active">Все</button>
+    <button class="filter">Прививки</button>
+    <button class="filter">Анализы</button>
+    <button class="filter">Приёмы</button>
+  </div>
+
+  <section class="history-list">
+    <article class="history-item">
+      <div class="history-date">15.06.2025</div>
+      <div class="history-content">
+        <h2>Прививка от бешенства</h2>
+        <p class="caption">Врач: Иванов И.И.</p>
+        <p>Вакцина: Рабикан. Следующая: 15.06.2026</p>
+      </div>
+    </article>
+    <article class="history-item">
+      <div class="history-date">02.05.2025</div>
+      <div class="history-content">
+        <h2>Общий анализ крови</h2>
+        <p class="caption">Врач: Петрова А.С.</p>
+        <p>Результат: в норме</p>
+      </div>
+    </article>
+    <article class="history-item">
+      <div class="history-date">20.03.2025</div>
+      <div class="history-content">
+        <h2>Плановый осмотр</h2>
+        <p class="caption">Врач: Сидоров В.В.</p>
+        <p>Назначение: витамины</p>
+      </div>
+    </article>
+  </section>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item"><span>🏠</span>Главная</a>
+    <a href="appointment.html" class="nav-item"><span>📅</span>Запись</a>
+    <a href="#" class="nav-item"><span>🛒</span>Магазин</a>
+    <a href="#" class="nav-item"><span>💬</span>Чат</a>
+    <a href="#" class="nav-item"><span>👤</span>Профиль</a>
+  </nav>
+
+</body>
+</html>

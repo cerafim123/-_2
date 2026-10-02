@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ВетКлиника — Главная</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dynamic.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>Мои питомцы</h1>
+    <button class="icon-btn" onclick="location.href='login.html'">👤</button>
+  </header>
+
+  <section class="pets-list">
+    <article class="pet-card" onclick="location.href='history.html'">
+      <div class="pet-avatar">🐱</div>
+      <div class="pet-info">
+        <h2>Барсик</h2>
+        <p>Кот • 3 года</p>
+        <p>След. прививка: 15.10.2025</p>
+      </div>
+      <span class="chevron">›</span>
+    </article>
+    <article class="pet-card">
+      <div class="pet-avatar">🐶</div>
+      <div class="pet-info">
+        <h2>Рекс</h2>
+        <p>Собака • 5 лет</p>
+        <p>След. прививка: 20.11.2025</p>
+      </div>
+      <span class="chevron">›</span>
+    </article>
+    <button class="add-pet-btn" onclick="showModal('addPetModal')">+ Добавить питомца</button>
+  </section>
+
+  <section class="quick-actions">
+    <h2>Быстрые действия</h2>
+    <div class="actions-grid">
+      <a href="appointment.html" class="action-card">
+        <span class="action-icon">📅</span><span>Записаться</span>
+      </a>
+      <a href="history.html" class="action-card">
+        <span class="action-icon">📋</span><span>История</span>
+      </a>
+      <a href="#" class="action-card">
+        <span class="action-icon">🛒</span><span>Магазин</span>
+      </a>
+      <a href="#" class="action-card">
+        <span class="action-icon">💬</span><span>Чат с врачом</span>
+      </a>
+    </div>
+  </section>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item active"><span>🏠</span>Главная</a>
+    <a href="appointment.html" class="nav-item"><span>📅</span>Запись</a>
+    <a href="#" class="nav-item"><span>🛒</span>Магазин</a>
+    <a href="#" class="nav-item"><span>💬</span>Чат</a>
+    <a href="#" class="nav-item"><span>👤</span>Профиль</a>
+  </nav>
+
+  <!-- Модальное окно добавления питомца -->
+  <div id="addPetModal" class="modal">
+    <div class="modal-content">
+      <h2>Добавить питомца</h2>
+      <label>Имя питомца
+        <input type="text" id="petName" placeholder="Например: Барсик">
+      </label>
+      <label>Вид
+        <select id="petType">
+          <option>Кошка</option>
+          <option>Собака</option>
+          <option>Грызун</option>
+          <option>Птица</option>
+        </select>
+      </label>
+      <label>Возраст (лет)
+        <input type="number" id="petAge" min="0" max="30">
+      </label>
+      <p id="petError" class="error-msg"></p>
+      <div class="modal-actions">
+        <button class="btn-secondary" onclick="hideModal('addPetModal')">Отмена</button>
+        <button class="btn-primary" onclick="addPet()" style="width:auto;margin:0;">Добавить</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
